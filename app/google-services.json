@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "780839917805",
+    "project_id": "anees-mobile-guard",
+    "storage_bucket": "anees-mobile-guard.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:780839917805:android:316f135c651feb059714e4",
+        "android_client_info": {
+          "package_name": "com.anees.mobileguard"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2OmPqq6Wr0qUBk0iz38uD1XWWF3EewUE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,1 @@
+{"hosting":{"public":"remote-dashboard","ignore":["firebase.json","**/.*","**/node_modules/**","firebase-config.js","firebase-config.example.js","README.md"]}}

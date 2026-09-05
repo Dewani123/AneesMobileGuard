@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
+<LinearLayout android:orientation="vertical" android:padding="20dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+<TextView android:text="REMOTE RESCUE / LOST MODE" android:textSize="22sp" android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+<TextView android:id="@+id/remoteStatus" android:layout_marginTop="12dp" android:text="LOST MODE: READY" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+<TextView android:id="@+id/deviceId" android:layout_marginTop="12dp" android:text="Device ID" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+<Button android:id="@+id/activateLost" android:text="Activate Lost Mode on this phone" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+<Button android:id="@+id/playAlarmRemote" android:text="Play Alarm on this phone" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+<Button android:id="@+id/deactivateLost" android:text="Deactivate Lost Mode on this phone" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+<TextView android:text="REMOTE CONTROLLER (use from another phone)" android:textStyle="bold" android:layout_marginTop="24dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+<EditText android:id="@+id/remoteDeviceId" android:hint="Lost phone Device ID" android:singleLine="true" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+<EditText android:id="@+id/remotePairingCode" android:hint="Pairing Code" android:singleLine="true" android:inputType="textPassword" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+<Button android:id="@+id/remoteActivate" android:text="REMOTE: Activate Lost Mode" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+<Button android:id="@+id/remoteLocate" android:text="REMOTE: Request Location" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+<Button android:id="@+id/remoteAlarm" android:text="REMOTE: Play Alarm" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+<Button android:id="@+id/remoteStatusButton" android:text="REMOTE: Request Device Status" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+<Button android:id="@+id/remoteDeactivate" android:text="REMOTE: Deactivate Lost Mode" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+<TextView android:text="Privacy: only anti-theft telemetry is sent. Contacts, SMS, photos, files, calls and microphone are not accessed." android:layout_marginTop="14dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+</LinearLayout>
+</ScrollView>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/alarm_background"
+    android:gravity="center"
+    android:padding="32dp">
+
+    <TextView
+        android:id="@+id/textAlarmTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/alarm_title"
+        android:textColor="@color/text_on_dark"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/alarm_subtitle"
+        android:textColor="@color/text_on_dark"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/buttonEnterPin"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/text_on_dark"
+        android:textColor="@color/alarm_background"
+        android:textStyle="bold"
+        android:text="@string/button_stop_alarm" />
+
+</LinearLayout>

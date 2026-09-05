@@ -1,0 +1,3 @@
+package com.anees.mobileguard
+
+enum class RemoteCommand { ACTIVATE_LOST_MODE, REQUEST_LOCATION, REQUEST_DEVICE_STATUS, PLAY_ALARM, DEACTIVATE_LOST_MODE }

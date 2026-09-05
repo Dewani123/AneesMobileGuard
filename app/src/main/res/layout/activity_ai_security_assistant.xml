@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/background_light" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="20dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="🤖 AI Security Assistant" android:textColor="@color/text_primary"
+            android:textSize="26sp" android:textStyle="bold" android:paddingBottom="6dp"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Privacy-first • Uses Mobile Guard security state only"
+            android:textColor="@color/text_secondary" android:textSize="14sp" android:paddingBottom="16dp"/>
+        <EditText android:id="@+id/aiInput" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="Ask: Is my phone secure?" android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_secondary" android:background="@color/card_background" android:padding="14dp"/>
+        <Button android:id="@+id/aiAsk" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="ASK ASSISTANT" android:layout_marginTop="10dp"/>
+        <TextView android:id="@+id/aiAnswer" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Ask me about your phone's security." android:textColor="@color/text_primary"
+            android:textSize="16sp" android:background="@color/card_background" android:padding="16dp" android:layout_marginTop="14dp"/>
+        <Button android:id="@+id/aiStatus" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="CHECK SECURITY STATUS" android:layout_marginTop="12dp"/>
+        <Button android:id="@+id/aiLost" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="HOW DOES LOST MODE WORK?" android:layout_marginTop="6dp"/>
+        <Button android:id="@+id/aiPrivacy" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="SHOW PRIVACY INFO" android:layout_marginTop="6dp"/>
+    </LinearLayout>
+</ScrollView>

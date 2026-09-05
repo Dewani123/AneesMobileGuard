@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Keeps Guard Mode's monitoring service running as a visible foreground service. -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <!-- Required on Android 14+ to declare the foreground service's purpose (specialUse). -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <!-- Lets Guard Mode automatically resume monitoring after a reboot, ONLY if the user
+         has explicitly turned that option on in Settings. -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- Lets the alarm screen appear immediately, even over the lock screen, like a
+         normal alarm-clock app is allowed to. -->
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+    <!-- Required on Android 13+ to show the "Guard Mode active" and "Alarm" notifications. -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <!-- Keeps the screen/CPU awake for the few seconds needed to reliably start the alarm
+         sound and light up the screen; released as soon as that is done or the alarm stops. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- Used for a short vibration alongside the audible alarm. -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- Network is used only for Firebase/FCM security telemetry and remote commands. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- Android 12+ Bluetooth permissions for the owner-selected smartwatch guard. -->
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+
+    <application
+        android:allowBackup="false"
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:theme="@style/Theme.AneesGuard"
+        android:supportsRtl="true">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".PinSetupActivity" android:exported="false" />
+        <activity android:name=".PinEntryActivity" android:exported="false" />
+        <activity android:name=".SettingsActivity" android:exported="false" />
+        <activity android:name=".FindMyPhoneActivity" android:exported="false" />
+        <activity android:name=".RemoteRescueActivity" android:exported="false" />
+        <activity android:name=".AiSecurityAssistantActivity" android:exported="false" />
+
+        <!-- Shown when the alarm fires. Allowed to draw over the lock screen and turn the
+             screen on, the same official mechanism alarm-clock apps use. It never unlocks
+             the device itself — the phone stays locked underneath it. -->
+        <activity
+            android:name=".AlarmActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"
+            android:theme="@style/Theme.AneesGuard.Alarm" />
+
+        <service
+            android:name=".GuardService"
+            android:exported="false"
+            android:foregroundServiceType="specialUse">
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="Anti-tamper alarm explicitly armed by the device owner" />
+        </service>
+
+        <service
+            android:name=".AmgFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name=".AirplaneModeReceiver" android:exported="true">
+            <intent-filter><action android:name="android.intent.action.AIRPLANE_MODE" /></intent-filter>
+        </receiver>
+
+        <receiver android:name=".BootReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+</manifest>

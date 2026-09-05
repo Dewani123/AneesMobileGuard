@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_title"
+            android:textColor="@color/brand_primary"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Alarm sound -->
+        <TextView style="@style/SettingsLabel" android:text="@string/label_alarm_sound" />
+        <TextView
+            android:id="@+id/textAlarmSoundValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_secondary"
+            android:layout_marginBottom="8dp" />
+        <Button
+            android:id="@+id/buttonPickSound"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_pick_sound"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Alarm volume -->
+        <TextView style="@style/SettingsLabel" android:text="@string/label_alarm_volume" />
+        <SeekBar
+            android:id="@+id/seekVolume"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Voice warning -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+            <TextView
+                style="@style/SettingsLabel"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/label_voice_warning" />
+            <Switch
+                android:id="@+id/switchVoiceWarning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <TextView style="@style/SettingsLabel" android:text="@string/label_voice_language" />
+        <Spinner
+            android:id="@+id/spinnerLanguage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Motion sensitivity -->
+        <TextView style="@style/SettingsLabel" android:text="@string/label_motion_sensitivity" />
+        <SeekBar
+            android:id="@+id/seekSensitivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Trigger behavior -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="4dp">
+            <TextView
+                style="@style/SettingsLabel"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/label_trigger_motion" />
+            <Switch
+                android:id="@+id/switchTriggerMotion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="4dp">
+            <TextView
+                style="@style/SettingsLabel"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/label_trigger_screen_on" />
+            <Switch
+                android:id="@+id/switchTriggerScreenOn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+            <TextView
+                style="@style/SettingsLabel"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/label_auto_restart_boot" />
+            <Switch
+                android:id="@+id/switchAutoRestartBoot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <TextView style="@style/SettingsLabel" android:text="@string/label_arming_delay" />
+        <SeekBar
+            android:id="@+id/seekArmingDelay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp" />
+
+        <Button
+            android:id="@+id/buttonVoiceMessage"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="@string/button_voice_message"
+            android:layout_marginBottom="12dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="4dp">
+            <TextView style="@style/SettingsLabel" android:layout_width="0dp" android:layout_weight="1" android:text="@string/label_flash_alarm" />
+            <Switch android:id="@+id/switchFlashAlarm" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+            <TextView style="@style/SettingsLabel" android:layout_width="0dp" android:layout_weight="1" android:text="@string/label_vibration_alarm" />
+            <Switch android:id="@+id/switchVibrationAlarm" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+            <TextView
+                style="@style/SettingsLabel"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="Bluetooth Range Guard" />
+            <Switch
+                android:id="@+id/switchBluetoothRangeGuard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/buttonChangePin"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:backgroundTint="@color/brand_primary"
+            android:textColor="@color/text_on_dark"
+            android:text="@string/button_change_pin"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/buttonTestAlarm"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="@string/button_test_alarm" />
+
+    </LinearLayout>
+</ScrollView>
