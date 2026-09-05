@@ -80,14 +80,14 @@
 
     <string name="find_phone_title">Find My Phone</string>
     <string name="find_phone_subtitle">This phone has a private device ID. Remote tracking will use your authorized account and internet connection.</string>
-    <string name="device_id_label">This phone's Device ID</string>
+    <string name="device_id_label">Device ID</string>
     <string name="current_location_label">Last known location on this phone</string>
     <string name="location_not_available">Location not available yet</string>
     <string name="button_refresh_location">Refresh location</string>
     <string name="button_open_map">Open in Maps</string>
     <string name="button_share_id">Share Device ID</string>
     <string name="share_device_id">Share Device ID</string>
-    <string name="remote_location_note">Remote tracking is not activated until a secure owner account/server is connected. The Device ID alone does not expose this phone's location.</string>
+    <string name="remote_location_note">Remote tracking requires a secure owner account and server connection. The Device ID alone does not expose this phone's location.</string>
 
     <string name="remote_rescue_title">Remote Rescue / Lost Mode</string>
     <string name="remote_rescue_note">Remote activation requires an authenticated backend such as Firebase/FCM. No server secret is stored in this APK.</string>
